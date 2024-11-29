@@ -56,7 +56,7 @@ export const ContextMenu = () => {
           </Item>
         )}
       </For>
-      <Show when={oneChecked()}>
+      <Show when={oneChecked() && UserMethods.can(me(), 2)}>
         <Item
           onClick={({ props }) => {
             if (props.is_dir) {
